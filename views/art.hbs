@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+
+    <!-- Your Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .artwork {
+            text-align: center;
+            max-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artwork img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .buy-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px; /* Added margin-top for space */
+            border-radius: 15px; /* Added rounded corners */
+        }
+
+        .artwork:hover .buy-button {
+            opacity: 1;
+        }
+
+        .artwork:hover img {
+            transform: scale(1.1);
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
+
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Explore these captivating artworks by talented artists.</h2>
+
+    <div class="gallery">
+        <div class="artwork">
+            <img src="./images/img1.jpg" alt="Children and Bicycle">
+            <h3>Children and Bicycle</h3>
+            <p>Artist: Sarah Johnson</p>
+            <p>An enchanting portrayal of childhood innocence and joy, where a group of children explores the world on their bicycles.</p>
+            <button class="buy-button">Buy</button>
+        </div>
+
+        <div class="artwork">
+            <img src="./images/img2.jpg" alt="The Golden Era" style="width: 600px;">
+            <h3>The Golden Era</h3>
+            <p>Artist: Michael Rodriguez</p>
+            <p>A mesmerizing depiction of a bygone era, bathed in the warm hues of nostalgia, capturing the essence of a golden age.</p>
+            <button class="buy-button">Buy</button>
+        </div>
+
+        <div class="artwork">
+            <img src="./images/img3.jpg" alt="Color Splash" style="width: 600px;">
+            <h3>Color Splash</h3>
+            <p>Artist: Emily Chen</p>
+            <p>An explosion of vibrant colors that dance and mingle, creating a captivating visual symphony that celebrates the beauty of diversity.</p>
+            <button class="buy-button">Buy</button>
+        </div>
+
+        <div class="artwork">
+            <img src="./images/img4.jpg" alt="The Girl">
+            <h3>The Girl</h3>
+            <p>Artist: Christopher Anderson</p>
+            <p>A poignant portrayal of a girl whose eyes tell a thousand stories, inviting viewers to ponder the depth of human experience.</p>
+            <button class="buy-button">Buy</button>
+        </div>
+
+        <div class="artwork">
+            <img src="./images/img5.jpg" alt="CountrySide">
+            <h3>CountrySide</h3>
+            <p>Artist: Maria Sanchez</p>
+            <p>A serene landscape capturing the tranquility of the countryside, where nature's beauty unfolds in every rolling hill and rustling leaf.</p>
+            <button class="buy-button">Buy</button>
+        </div>
+    </div>
+</body>
+</html>

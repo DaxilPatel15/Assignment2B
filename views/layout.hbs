@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{{ title }} - Virtual Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Whisper&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Lobster', sans-serif;
+            box-sizing: border-box;
+            background-color: #f4f4f4; /* Optional: Set a background color for the body */
+        }
+
+        header {
+            background-color: #fefefe;
+            color: #fff;
+            padding: 10px;
+            font-family: 'Lobster', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Lobster', sans-serif;
+            margin: 0;
+        }
+
+        nav ul {
+            font-family: 'Lobster', sans-serif;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav ul li {
+            font-family: 'Lobster', sans-serif;
+            display: inline;
+        }
+
+        nav ul li a {
+            font-family: 'Lobster', sans-serif;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+            transition: color 0.3s ease-in-out; /* Added transition for smooth effect */
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50; /* Change the text color on hover */
+        }
+
+        nav ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #4CAF50; /* Color of the underline */
+            position: absolute;
+            bottom: 0;
+            font-family: 'Lobster', sans-serif;
+            left: 50%;
+            transition: width 0.3s ease-in-out; /* Added transition for the underline effect */
+        }
+
+        nav ul li a:hover::after {
+            width: 100%; /* Expand the width of the underline on hover */
+            left: 0;
+        }
+
+        main {
+            font-family: 'Lobster', sans-serif;
+            padding: 20px;
+        }
+
+        footer {
+            font-family: 'Lobster', sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content -->
+        <h1>Virtual_Art</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/art">Art</a></li>
+               
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="./viewadd">View</a></li>
+
+                {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{user.username}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{!-- Content from individual views will be rendered here --}}
+        {{{ body }}}
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+        <p>&copy; 2023 Virtual Art Gallery</p>
+    </footer>
+</body>
+</html>

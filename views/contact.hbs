@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Virtual Art Gallery</title>
+    <!-- Include your CSS or link to a Bootstrap CDN for styling -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4; /* Optional: Set a background color for the body */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #fefefe;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        main > div {
+            max-width: 500px;
+            margin-right: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            width: 100%;
+            margin-right: 200px; /* Shift the form to the left */
+        }
+
+        footer {
+            
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content -->
+        
+        <nav>
+            <!-- Your navigation menu -->
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <p>Welcome to our contact page! We value your feedback, inquiries, and suggestions. Whether you have questions about our artworks, want to collaborate, or just want to say hello, feel free to reach out to us using the form below.</p>
+
+            <!-- Replace the following with your actual description -->
+            <p>This is a placeholder for the description. Customize this text with your specific information.</p>
+
+            <div>
+            <!-- Replace the following with your actual contact information -->
+            <p>Contact Information:</p>
+            <p>Email: info@virtualartgallery.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+        </div>
+        </div>
+
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+        <p>&copy; 2023 Virtual Art Gallery</p>
+    </footer>
+</body>
+</html>

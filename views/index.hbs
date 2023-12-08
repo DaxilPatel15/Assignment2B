@@ -1,0 +1,36 @@
+<head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Whisper&display=swap" rel="stylesheet">
+    <style>
+        .jumbotron {
+            text-align: center;
+            padding: 40px;
+            font-family: 'Lobster', sans-serif;
+        }
+
+        h2, p {
+         font-family: 'Lobster', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h2>Welcome to the Virtual Art Gallery!</h2>
+        <p>Explore a diverse collection of breathtaking artworks from talented artists around the world.</p>
+        
+        <!-- Add your image here -->
+        <img src="./images/main.jpg" alt="Virtual Art Gallery" style="max-width: 100%; height: auto;">
+
+        <p style="margin-top: 20px;">
+            Welcome to Virtual Art, an online sanctuary for art enthusiasts and connoisseurs alike. Immerse yourself in a curated collection of exquisite artworks spanning a myriad of styles, mediums, and cultural influences. Our platform is a celebration of creativity, where each stroke of the brush and every pixel of digital art tells a unique story. Whether you're a seasoned collector or a first-time admirer, Virtual Art invites you to explore the boundless world of artistic expression. From classical masterpieces to cutting-edge contemporary works, our gallery showcases the diverse talents of artists from around the globe. Join us on a visual journey that transcends boundaries, provokes thought, and sparks inspiration. Unleash your passion for art, discover new perspectives, and make the beauty of creativity a part of your daily life at Virtual Art.
+        </p>
+
+        {{#if isAuthenticated}}
+            <p style="margin-top: 20px;"><a class="btn btn-primary btn-lg" href="/private-art" role="button">View Your Art</a></p>
+        {{else}}
+            <p style="margin-top: 20px;"><a class="btn btn-primary btn-lg" href="/login" role="button">Login to Explore</a></p>
+        {{/if}}
+    </div>
+</body>
